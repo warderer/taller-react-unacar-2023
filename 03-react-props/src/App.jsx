@@ -8,6 +8,7 @@ import seis from './assets/img/seis.jpg'
 import ilustracion from './assets/img/ilustracion.svg'
 import ilustracion1 from './assets/img/ilustracion1.svg'
 import Header from './components/Header'
+import OurServices from './components/OurServices'
 
 function App() {
 
@@ -34,35 +35,9 @@ function App() {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
   </section>
-  <section className="cards contenedor">
-    <h2 className="titulo">Our services</h2>
-    <div className="content-cards">
-      <article className="card">
-        <i className="far fa-clone" />
-        <h3>Title Card</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        <a href="" className="cta">
-          Learn more
-        </a>
-      </article>
-      <article className="card">
-        <i className="fas fa-database" />
-        <h3>Title Card</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        <a href="" className="cta">
-          Learn more
-        </a>
-      </article>
-      <article className="card">
-        <i className="far fa-object-group" />
-        <h3>Title Card</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        <a href="" className="cta">
-          Learn more
-        </a>
-      </article>
-    </div>
-  </section>
+
+  <OurServices />
+  
   <section className="galeria">
     <div className="contenedor">
       <h2 className="titulo">Our work</h2>
