@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 const PortafolioDetalle = () => {
   const portafolio = [
@@ -7,13 +7,20 @@ const PortafolioDetalle = () => {
     { id: 3, nombre: 'Proyecto 3: Calculadora', descripcion: 'Descripcion 3' }
   ]
 
+  // useParams() es un hook que nos permite obtener los parámetros de la ruta
   const { pid } = useParams()
   // const pid = useParams().pid
+
+  // useNavigate() es un hook que nos permite navegar entre rutas
+  const navigate = useNavigate()
 
   return (
     <>
       <h2>{portafolio[pid - 1].nombre}</h2>
       <p>{portafolio[pid - 1].descripcion}</p>
+      <button onClick={() => navigate('/portafolio')}>Regresar</button>
+      {/* Si quiero ir a la página anterior del historial: navigate(-1)  */}
+      {/* Si quiero ir a la página siguiente del historial: navigate(1) */}
     </>
   )
 }
