@@ -6,8 +6,8 @@ import RoutesIndex from './routes/RoutesIndex'
 function App () {
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         <RoutesIndex />
       </BrowserRouter>
     </>

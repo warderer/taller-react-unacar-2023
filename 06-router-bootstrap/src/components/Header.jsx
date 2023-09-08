@@ -1,10 +1,12 @@
+import { NavLink } from 'react-router-dom'
+
 const Header = () => {
   return (
     <nav className='navbar navbar-expand-lg bg-body-tertiary'>
       <div className='container-fluid'>
-        <a className='navbar-brand' href='/'>
+        <NavLink className='navbar-brand' to='/'>
           UNACAR
-        </a>
+        </NavLink>
         <button
           className='navbar-toggler'
           type='button'
@@ -20,21 +22,21 @@ const Header = () => {
           <ul className='navbar-nav'>
 
             <li className='nav-item'>
-              <a className='nav-link active' aria-current='page' href='/'>
+              <NavLink className='nav-link active' aria-current='page' to='/'>
                 Home
-              </a>
+              </NavLink>
             </li>
 
             <li className='nav-item'>
-              <a className='nav-link' href='/portafolio'>
+              <NavLink className='nav-link' to='/portafolio'>
                 Portafolio
-              </a>
+              </NavLink>
             </li>
 
             <li className='nav-item'>
-              <a className='nav-link' href='/contacto'>
+              <NavLink className='nav-link' to='/contacto'>
                 Contacto
-              </a>
+              </NavLink>
             </li>
 
           </ul>
