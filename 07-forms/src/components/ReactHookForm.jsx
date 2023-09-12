@@ -17,7 +17,8 @@ const ReactHookForm = () => {
           placeholder='Tu nombre'
           {...register('firstName', { required: true, maxLength: 20 })}
         />
-
+        {errors.firstName?.type === 'required' && 'First name is required'}
+        <br />
         <label htmlFor='lastName'>Last Name</label>
         <input
           type='text'
