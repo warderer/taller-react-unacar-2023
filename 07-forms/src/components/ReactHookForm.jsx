@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import swal from 'sweetalert'
 import logo from '../assets/react.svg'
 
 const schema = yup.object({
@@ -18,7 +19,15 @@ const ReactHookForm = () => {
     resolver: yupResolver(schema)
   })
 
-  const onSubmit = data => console.log(data)
+  const onSubmit = data => {
+    console.log(data)
+
+    swal({
+      title: 'User Created!',
+      text: JSON.stringify(data),
+      icon: 'success'
+    })
+  }
 
   return (
     <div>
